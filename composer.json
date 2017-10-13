@@ -2,8 +2,7 @@
     "name": "nicoswd/symfony-rule-engine-bundle",
     "type": "bundle",
     "require": {
-        "nicoswd/php-rule-parser": "^0.5.4",
-        "symfony/symfony": "^3.3"
+        "nicoswd/php-rule-parser": "^0.5.4"
     },
     "license": "MIT",
     "authors": [
@@ -15,7 +14,7 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "nicoSWD\\RuleBundle\\": "src/"
+            "nicoSWD\\RuleBundle\\": "src/nicoSWD/RuleBundle"
         }
     }
 }
