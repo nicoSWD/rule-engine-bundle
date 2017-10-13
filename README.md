@@ -43,6 +43,12 @@ $result = $this->get('rule_parser')->isTrue($rule, $variables);
 Custom functions
 ================
 
+Custom functions are automatically discovered. They just need to be configured
+as service with the tag `nico_swd.rule.function`.
+
+If you have multiple functions inside the same directory, the easiest way to make
+them visible to the bundle is this:
+
 _services.yml_
 
 ```yaml
@@ -51,7 +57,9 @@ AppBundle\Functions\:
     tags: ['nico_swd.rule.function']
 ```
 
-Custom Function Example
+Furthermore, custom functions must implement `nicoSWD\Rules\Core\CallableUserFunction`
+like in the example below
+
 ```php
 <?php
 
@@ -66,10 +74,11 @@ class ArrayFilter implements CallableUserFunction
     /**
      * @param BaseToken $param
      * @param BaseToken $param ...
-     * @return mixed
+     * @return BaseToken
      */
     public function call($param = null)
     {
+        // Make sure this functions only works on arrays
         if (!$param instanceof TokenArray) {
             throw new \InvalidArgumentException();
         }
@@ -90,8 +99,14 @@ class ArrayFilter implements CallableUserFunction
 }
 ```
 
-```php
-$result = $this->get('rule_parser')->isTrue('array_filter([0, false, 1]) === [1]');
+The functions optionally retrieve instances of `nicoSWD\Rules\Tokens\BaseToken` as arguments,
+and always must return one as well.
 
+```php
+<?php
+
+$rule = 'array_filter([0, false, 1]) === [1]';
+
+$result = $this->get('rule_parser')->isTrue($rule);
 var_dump($result); // bool(true)
 ```
