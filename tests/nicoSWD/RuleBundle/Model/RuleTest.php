@@ -7,8 +7,9 @@ use Mockery\Mock;
 use nicoSWD\RuleBundle\Model\Rule;
 use nicoSWD\Rules\Evaluator;
 use nicoSWD\Rules\Parser;
+use PHPUnit\Framework\TestCase;
 
-class RuleTest extends \PHPUnit_Framework_TestCase
+class RuleTest extends TestCase
 {
     use MockeryPHPUnitIntegration;
 
