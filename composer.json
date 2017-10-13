@@ -2,7 +2,7 @@
     "name": "nicoswd/symfony-rule-engine-bundle",
     "type": "bundle",
     "require": {
-        "nicoswd/php-rule-parser": "^0.5.2",
+        "nicoswd/php-rule-parser": "^0.5.4",
         "symfony/symfony": "^3.3"
     },
     "license": "MIT",
