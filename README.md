@@ -1,4 +1,5 @@
 ![build](https://travis-ci.org/nicoSWD/rule-engine-bundle.svg?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nicoSWD/rule-engine-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nicoSWD/rule-engine-bundle/?branch=master)
 
 This package bundles [nicoSWD/php-rule-parser](https://github.com/nicoSWD/php-rule-parser)
 
