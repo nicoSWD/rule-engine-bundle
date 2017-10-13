@@ -1,12 +1,13 @@
+This package bundles [nicoSWD/php-rule-parser](https://github.com/nicoSWD/php-rule-parser)
+
+Requires PHP >= 7.0
+
 Install
 =======
 
 ```shell
 $ composer require nicoswd/symfony-rule-engine-bundle
 ```
-
-Configure
-=========
 
 ```php
 <?php
@@ -17,6 +18,17 @@ $bundles = [
     new nicoSWD\RuleBundle\RuleBundle(),
     // ...
 ];
+```
+
+Usage Example
+=====
+```php
+<?php
+
+$rule = '[1, 4, 3].join(glue) === "1-4-3"';
+$variables = ['glue' => '-'];
+
+$result = $this->get('rule_parser')->isTrue($rule, $variables);
 ```
 
 Custom functions
@@ -30,7 +42,7 @@ AppBundle\Functions\:
     tags: ['nico_swd.rule.function']
 ```
 
-Function example
+Custom Function Example
 ```php
 <?php
 
@@ -38,9 +50,9 @@ namespace AppBundle\Functions;
 
 use nicoSWD\Rules\Core\CallableUserFunction;
 use nicoSWD\Rules\Tokens\BaseToken;
-use nicoSWD\Rules\Tokens\TokenInteger;
+use nicoSWD\Rules\Tokens\TokenArray;
 
-class Multiply implements CallableUserFunction
+class ArrayFilter implements CallableUserFunction
 {
     /**
      * @param BaseToken $param
@@ -49,12 +61,28 @@ class Multiply implements CallableUserFunction
      */
     public function call($param = null)
     {
-        return new TokenInteger($param->getValue() * 2);
+        if (!$param instanceof TokenArray) {
+            throw new \InvalidArgumentException();
+        }
+
+        return new TokenArray(
+            array_values(
+                array_filter(
+                    $param->toArray()
+                )
+            )
+        );
     }
 
     public function getName(): string
     {
-        return 'multiply';
+        return 'array_filter';
     }
 }
+```
+
+```
+$result = $this->get('rule_parser')->isTrue('array_filter([0, false, 1]) === [1]');
+
+var_dump($result); // bool(true)
 ```
