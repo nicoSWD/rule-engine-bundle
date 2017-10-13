@@ -2,6 +2,7 @@ Symfony Rule Engine Bundle
 ==========================
 
 ![build](https://travis-ci.org/nicoSWD/rule-engine-bundle.svg?branch=master)
+![coverage](https://scrutinizer-ci.com/g/nicoSWD/rule-engine-bundle/badges/coverage.png?b=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nicoSWD/rule-engine-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nicoSWD/rule-engine-bundle/?branch=master)
 [![Latest Stable Version](https://img.shields.io/packagist/v/nicoswd/symfony-rule-engine-bundle.svg)](https://packagist.org/packages/nicoswd/symfony-rule-engine-bundle)
 
