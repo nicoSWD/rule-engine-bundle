@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <container xmlns="http://symfony.com/schema/dic/services"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
         <service id="rule_parser" class="nicoSWD\RuleBundle\Model\Rule">
@@ -9,13 +9,13 @@
             <argument type="service" id="nico_swd.rules.evaluator" />
         </service>
 
-        <service id="nico_swd.rules.parser" class="nicoSWD\Rules\Parser">
+        <service id="nico_swd.rules.parser" class="nicoSWD\Rules\Parser" public="false">
             <argument type="service" id="nico_swd.rules.tokenizer"/>
             <argument type="service" id="nico_swd.rules.expressions.factory"/>
         </service>
 
-        <service id="nico_swd.rules.evaluator" class="nicoSWD\Rules\Evaluator" />
-        <service id="nico_swd.rules.tokenizer" class="nicoSWD\Rules\Tokenizer" />
-        <service id="nico_swd.rules.expressions.factory" class="nicoSWD\Rules\Expressions\Factory" />
+        <service id="nico_swd.rules.evaluator" class="nicoSWD\Rules\Evaluator" public="false" />
+        <service id="nico_swd.rules.tokenizer" class="nicoSWD\Rules\Tokenizer" public="false" />
+        <service id="nico_swd.rules.expressions.factory" class="nicoSWD\Rules\Expressions\Factory" public="false" />
     </services>
 </container>

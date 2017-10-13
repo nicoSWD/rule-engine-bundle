@@ -38,6 +38,7 @@ $rule = '[1, 4, 3].join(glue) === "1-4-3"';
 $variables = ['glue' => '-'];
 
 $result = $this->get('rule_parser')->isTrue($rule, $variables);
+var_dump($result); // bool(true)
 ```
 
 Custom functions
