@@ -43,6 +43,6 @@ class RuleTest extends TestCase
         $this->parser->shouldReceive('parse')->once()->andReturn('1');
         $this->evaluator->shouldReceive('evaluate')->once()->andReturn(false);
 
-        $this->assertFalse($this->rule->isTrue('1 === 2'));
+        $this->assertTrue($this->rule->isFalse('1 === 2'));
     }
 }
