@@ -1,3 +1,5 @@
+![build](https://travis-ci.org/nicoSWD/rule-engine-bundle.svg?branch=master)
+
 This package bundles [nicoSWD/php-rule-parser](https://github.com/nicoSWD/php-rule-parser)
 
 Requires PHP >= 7.0
