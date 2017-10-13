@@ -81,7 +81,7 @@ class ArrayFilter implements CallableUserFunction
 }
 ```
 
-```
+```php
 $result = $this->get('rule_parser')->isTrue('array_filter([0, false, 1]) === [1]');
 
 var_dump($result); // bool(true)
