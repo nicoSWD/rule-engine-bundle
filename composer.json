@@ -1,5 +1,6 @@
 {
     "name": "nicoswd/symfony-rule-engine-bundle",
+    "description": "Symfony Rule Engine Bundle - Parses & Evaluates Rules Written in a JavaScript-like Syntax Edit",
     "type": "bundle",
     "require": {
         "nicoswd/php-rule-parser": "^0.5.6"

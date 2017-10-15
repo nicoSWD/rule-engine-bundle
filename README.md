@@ -41,7 +41,7 @@ $result = $this->get('rule_parser')->isTrue($rule, $variables);
 var_dump($result); // bool(true)
 ```
 
-Custom functions
+Custom Functions
 ================
 
 Custom functions are automatically discovered. They just need to be configured

@@ -40,7 +40,7 @@ class RuleTest extends TestCase
 
     public function testGivenARuleWhenTheEvaluatorReturnsFalseItShouldReturnFalse()
     {
-        $this->parser->shouldReceive('parse')->once()->andReturn('1');
+        $this->parser->shouldReceive('parse')->once()->andReturn('0');
         $this->evaluator->shouldReceive('evaluate')->once()->andReturn(false);
 
         $this->assertTrue($this->rule->isFalse('1 === 2'));

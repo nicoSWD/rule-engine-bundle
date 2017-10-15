@@ -10,8 +10,8 @@
         </service>
 
         <service id="nico_swd.rules.parser" class="nicoSWD\Rules\Parser" public="false">
-            <argument type="service" id="nico_swd.rules.tokenizer"/>
-            <argument type="service" id="nico_swd.rules.expressions.factory"/>
+            <argument type="service" id="nico_swd.rules.tokenizer" />
+            <argument type="service" id="nico_swd.rules.expressions.factory" />
         </service>
 
         <service id="nico_swd.rules.evaluator" class="nicoSWD\Rules\Evaluator" public="false" />
