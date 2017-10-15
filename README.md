@@ -7,6 +7,8 @@ Symfony Rule Engine Bundle
 [![Latest Stable Version](https://img.shields.io/packagist/v/nicoswd/symfony-rule-engine-bundle.svg)](https://packagist.org/packages/nicoswd/symfony-rule-engine-bundle)
 
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/67203389-970c-419c-9430-a7f9a005bd94/big.png)](https://insight.sensiolabs.com/projects/67203389-970c-419c-9430-a7f9a005bd94)
+
 This package bundles [nicoSWD/php-rule-parser](https://github.com/nicoSWD/php-rule-parser)
 
 Requires PHP >= 7.0
