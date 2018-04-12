@@ -13,6 +13,8 @@ This package bundles [nicoSWD/php-rule-parser](https://github.com/nicoSWD/php-ru
 
 Requires PHP >= 7.0
 
+Compatible with Symfony 3 and 4!
+
 Install
 =======
 
