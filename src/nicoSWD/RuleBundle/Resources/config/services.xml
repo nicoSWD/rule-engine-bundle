@@ -14,6 +14,7 @@
             <argument type="service" id="nico_swd.rules.expressions.factory" />
         </service>
 
+        <service id="nicoSWD\RuleBundle\Model\Rule" alias="rule_parser" public="true" />
         <service id="nico_swd.rules.evaluator" class="nicoSWD\Rules\Evaluator" public="false" />
         <service id="nico_swd.rules.tokenizer" class="nicoSWD\Rules\Tokenizer" public="false" />
         <service id="nico_swd.rules.expressions.factory" class="nicoSWD\Rules\Expressions\Factory" public="false" />
